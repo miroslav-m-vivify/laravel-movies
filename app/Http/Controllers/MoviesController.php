@@ -10,6 +10,8 @@ use Carbon\Carbon;
 
 class MoviesController extends Controller
 {
+    protected $latest_movies;
+
     public function index() {
         $movies = Movie::all();
         return view('movies.index', compact('movies'));

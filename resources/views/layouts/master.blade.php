@@ -17,8 +17,12 @@
 
     @include('layouts.navbar')
 
-    <div class="span12">
-        @yield('content')
+    <div class="row">
+      <div class="col-sm-8 blog-main">
+          @yield('content')
+      </div>
+
+      @include('layouts.sidebar')
     </div>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
