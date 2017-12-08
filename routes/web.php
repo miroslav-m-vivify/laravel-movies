@@ -25,3 +25,5 @@ Route::post('/create', [
 ]);
 
 Route::post('/comments/add/{id}', 'CommentsController@store');
+
+Route::get('/genres/{genre}', 'GenresController@show');
