@@ -23,3 +23,5 @@ Route::post('/create', [
     'as' => 'movies.create',
     'uses' => 'MoviesController@store'
 ]);
+
+Route::post('/comments/add/{id}', 'CommentsController@store');

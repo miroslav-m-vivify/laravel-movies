@@ -11,4 +11,8 @@ class Comment extends Model
     public function movie() {
         return $this->belongsTo(Movie::class);
     }
+
+    const STORE_RULES = [
+    	'content' => 'required'
+	];
 }

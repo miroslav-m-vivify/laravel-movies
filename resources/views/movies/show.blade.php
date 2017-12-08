@@ -24,5 +24,25 @@
           </ul>
         </div>
       @endif
+
+      <div class="container">
+        <form method="POST" action="{{ url('/comments/add/' . $movie->id) }}">
+
+            {{ csrf_field() }}
+
+            <div class="form-group">
+                <label for="content">Comment</label>
+                <input type="text" class="form-control" id="content" name="content"/>
+                @include(
+                    'partials.error-message',
+                    ['fieldTitle' => 'content']
+                )
+            </div>
+
+            <div class="form-group">
+                <button type="submit" class="btn btn-success">Add comment</button>
+            </div>
+        </form>
+      </div>
     </div>
 @endsection
