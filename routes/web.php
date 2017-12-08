@@ -18,3 +18,8 @@ Route::get('/movies', 'MoviesController@index');
 Route::get('/movies/{id}', 'MoviesController@show');
 
 Route::get('/create', 'MoviesController@create');
+
+Route::post('/create', [
+    'as' => 'movies.create',
+    'uses' => 'MoviesController@store'
+]);
