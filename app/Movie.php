@@ -14,5 +14,9 @@ class Movie extends Model
     	'director' => 'max: 25',
     	'year' => 'integer | between: 1900, $year',
     	'storyline' => 'max: 1000'
-    ];
+	];
+	
+	public function comments() {
+		return $this->hasMany(Comment::class);
+	}
 }
